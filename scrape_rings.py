@@ -124,8 +124,3 @@ for url in master_list_urls:
     textfile.write(values + "\n")
     textfile.close()
 
-
-print("test")
-print("test")
-print("test")
-print("test")
