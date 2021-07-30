@@ -118,7 +118,7 @@ for url in master_list_urls:
 
     # values = []
     # values = [target_url, price, carat, clarity, shape, color]
-    values = target_url + "," + price + "," + carat + "," + clarity + "," + shape + "," + color
+    values = target_url + "|" + price + "|" + carat + "|" + clarity + "|" + shape + "|" + color
 
     textfile = open(data_list, "a")
     textfile.write(values + "\n")

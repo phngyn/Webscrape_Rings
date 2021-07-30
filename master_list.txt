@@ -18,6 +18,14 @@
 /diamonds/brand-new-solitaire-730841
 /diamonds/james-allen-1-carat-diamond-engagement-ring-14k-white-gold-gia-certified-730839
 /diamonds/engagement-ring-and-wedding-band-730837
+/diamonds/nature-themed-engagement-ring-730834
+/diamonds/shane-co-sapphire-engagement-ring-enhancer-730833
+/diamonds/557-carat-oval-diamond-ring-730832
+/diamonds/fred-meyer-jewelers-2-14-ct-tw-diamond-wedding-ring-730831
+/diamonds/round-engagement-ring-730830
+/diamonds/white-gold-quad-princess-cut-engagement-ring-730829
+/diamonds/princess-cut-engagement-ring-14k-rose-gold-730828
+/diamonds/forever-one-halo-diamond-engagement-ring-730827
 /diamonds/engagement-ring-princess-cut-730826
 /diamonds/301-elongated-cushion-cut-gia-cert-lab-grown-730194
 /diamonds/gia-certified-271-ctw-3-stone-old-european-cut-ring-730193
@@ -208,7 +216,6 @@
 /diamonds/lab-grown-251ct-round-brilliant-diamond-ring-730515
 /diamonds/diamond-and-aquamarine-engagement-ring-730506
 /diamonds/verragio-exquisite-engagement-ring-2-woman%E2%80%99s-wedding-bands-and-men%E2%80%99s-wedding-band-730503
-/diamonds/pear-shaped-engagement-ring-730498
 /diamonds/princess-cut-diamond-engagement-ring-730501
 /diamonds/diamond-ring-appraised-3k-730485
 /diamonds/simond-g-halo-diamond-ring-730484
@@ -321,7 +328,6 @@
 /diamonds/diamonds-direct-14-karat-white-gold-3-stone-engagement-ring-729804
 /diamonds/630-ct-radiant-diamond-729798
 /diamonds/1ct-tacori-halo-diamond-engagement-ring-and-band-729771
-/diamonds/engagement-ring-10-ct-729756
 /diamonds/fancy-yellow-diamond-ring-729736
 /diamonds/diamond-ring-729735
 /diamonds/tanzanite-heart-and-diamond-ring-729734
@@ -350,6 +356,7 @@
 /diamonds/tiffany-style-legacy-aquamarinediamond-ring-729433
 /diamonds/pear-shape-diamond-ring-342-carat-18kt-white-gold-certified-729408
 /diamonds/346-ct-pear-diamond-ring-729406
+/diamonds/deal-day-301-carat-pear-diamond-engagement-ring-customized-729410
 /diamonds/jared-princess-engagementwedding-set-729404
 /diamonds/14k-gold-black-and-white-diamond-ring-729402
 /diamonds/round-diamond-807-carat-great-deal-729348
@@ -442,6 +449,7 @@
 /diamonds/corona-situation-classic-diamond-ring-162-carat-certified-split-shank-setting-style-724446
 /diamonds/video-igi-certified-d-vs2-18k-white-gold-oval-diamond-halo-engagement-ring-723721
 /diamonds/95-ctw-75-center-si-round-brilliant-723551
+/diamonds/corona-situation-classic-diamond-ring-103-carat-princess-cut-diamond-deal-wont-last-723346
 /diamonds/emerald-cut-diamond-ring-723081
 /diamonds/14-kw-14-ct-echo-round-solitaire-brilliant-cut-diamond-engagement-ring-722406
 /diamonds/tourneau-de-beers-18k-gold-5-ct-solitaire-vs1-diamond-engagement-ring-722271
@@ -563,7 +571,6 @@
 /diamonds/4-carat-moissanite-cushion-diamond-solitaire-692791
 /diamonds/new-ring-jeff-cooper-platinum-set-15-emerald-gia-center-696126
 /diamonds/310-oval-diamond-ring-250-center-gia-certified-695646
-/diamonds/274-ctw-pear-shaped-engagement-ring-694241
 /diamonds/100-carat-ctw-princess-cut-diamond-engagement-rings-set-694176
 /diamonds/tiffany-co-round-diamond-engagement-ring-693001
 /diamonds/amazing-natural-engagement-ringvideo-691546
@@ -618,6 +625,7 @@
 /diamonds/round-diamond-engagement-ring-430-ct-total-diamond-weight-681016
 /diamonds/300-emerald-halo-engagement-ring-25-vvs2-gia-center-680626
 /diamonds/deal-day-208-carat-certified-big-look-less-value-680366
+/diamonds/robbins-brothers-round-center-093-ct-680001
 /diamonds/gabriel-co-round-diamond-engagement-ring-679546
 /diamonds/vintage-platinum-tacori-setting-free-wedding-band-677461
 /diamonds/stunning-round-diamond-engagement-ring-set-677316
@@ -630,10 +638,12 @@
 /diamonds/tacori-260-diamond-ring-180-ct-emerald-gia-center-674566
 /diamonds/pear-engagement-ring-674481
 /diamonds/170-carat-certified-oval-diamond-white-gold-18-kt-674181
+/diamonds/diamond-platinum-wedding-set-155-ct-igi-si2-color-i-round-brilliant-cut-check-out-diamond
 /diamonds/260diamond-engagement-ring-2oo-ivs1-gia-center-673541
 /diamonds/gia-certified-300-emerald-cut-diamond-solitaire-25-vvs2-gia-certified-673386
 /diamonds/gia-certified-platinum-075ct-cushion-cut-diamond-halo-engagement-ring-597941
 /diamonds/210-carat-gia-certified-halo-ring-15ct-i-vs1-center-673241
+/diamonds/171-ct-ajaffe-designer-gia-certified-new-122-f-vvs2-ct-round-diamond-center-672711
 /diamonds/ritani-diamond-ring-270-carat-triple-exellent-center-gia-cert-672451
 /diamonds/122-f-vvs2-diamond-solitaire-white-gold-672221
 /diamonds/princess-cut-70-cts-engagement-ring-672096
@@ -720,8 +730,8 @@
 /diamonds/wedding-set-video-656596
 /diamonds/rose-gold-engagement-set-video-656611
 /diamonds/19-carat-ring-15-i-vs1-gia-radiant-center-gorgeous-ring-334061
-/diamonds/095-ct-princess-diamond-vs2-clarity-plus-2-wedding-bands-additional-075-carats-diamonds
 /diamonds/12-ct-round-brilliant-solitaire-diamond-engagement-ring-521126
+/diamonds/095-ct-princess-diamond-vs2-clarity-plus-2-wedding-bands-additional-075-carats-diamonds
 /diamonds/157ct-round-diamond-modern-engagement-ring-581131
 /diamonds/amazing-deal-princess-cut-engagement-ring-566046
 /diamonds/womens-fashion-ring-snake-shaped-650191
@@ -802,6 +812,7 @@
 /diamonds/half-way-18k-white-gold-diamond-band-features-025ct-total-diamonds-video-639596
 /diamonds/beautiful-color-stone-cocktail-ring-center-blue-sapphire-and-side-diamonds-622811
 /diamonds/400-set-diamond-ring-set-250i-si1-gia-cushion-center-wedding-band-combo-630941
+/diamonds/251-carat-gia-i-color-vs2-certified-round-cut-diamond-engagement-ring-542201
 /diamonds/stunning-gia-certified-080ct-i-vvs1-excellent-cut-round-stone-platinum-014ct-petite-pave
 /diamonds/modern-customized-152-carat-18kt-white-gold-amazing-deal-638281
 /diamonds/certified-engagement-ring-center-emerald-100ct-diamond-and-side-diamonds-631321
@@ -940,10 +951,6 @@
 /diamonds/classic-engagement-ring-cushion-cut-certified-150-carat-great-deal-637826
 /diamonds/round-brilliant-cut-engagement-ring-114ct-center-beautiful-598111
 /diamonds/custom-engagement-ring-round-diamond-120-carat-certified-641896
-/diamonds/152ct-engagement-ring-620196
-/diamonds/stunning-custom-251-tcw-gia-radiant-engagement-ring-wedding-band-630266
-/diamonds/stunning-14k-yellow-gold-engagement-diamond-ring-beautiful-gia-certified-051ct-centre
-/diamonds/069-carat-round-diamond-solitaire-engagement-ring-610826
 /diamonds/striking-2-carat-asscher-cut-engagement-ring-562791
 /diamonds/110-ct-total-weight-princess-cut-diamond-engagement-ring-562816
 /diamonds/130-ct-emerald-cut-center-diamond-engagement-ring-18kt-white-gold-562806
