@@ -12,9 +12,9 @@ container_posting_url = []
 #gets directory of current working file
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
-base_url = "https://www.idonowidont.com/marketplace/engagement-rings"
-master_list = dir_path + "\master_list_rings.txt"
-data_list = dir_path + "\data_list_rings.txt"
+base_url = "https://www.idonowidont.com/marketplace/men's-watches"
+master_list = dir_path + "\master_list_watches.txt"
+data_list = dir_path + "\data_list_watches.txt"
 
 print(master_list, data_list)
 
