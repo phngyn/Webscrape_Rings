@@ -13,10 +13,10 @@ container_posting_url = []
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 base_url = "https://www.idonowidont.com/marketplace/engagement-rings"
-master_list = dir_path + "\master_list_rings.txt"
-data_list = dir_path + "\data_list_rings.txt"
+ring_src = dir_path + "\ring_src.txt"
+ring_data = dir_path + "\ring_data.txt"
 
-print(master_list, data_list)
+print(ring_src, ring_data)
 
 #Find the last page to loop through
 uClient = urlopen(base_url)
@@ -30,7 +30,7 @@ last_page = int(last_page_url[-2:]) + 1
 
 
 # Loop through list of pages to gather all posting url
-# and add url to our master_list if it's not in the file
+# and add url to our ring_src if it's not in the file
 for i in range(0, last_page + 1):
     if i == 0:
         my_url = base_url
@@ -50,34 +50,37 @@ for i in range(0, last_page + 1):
 
     for posts in container_posting:
         post_url = posts.div.a["href"]
-        with open(master_list, "r+") as file:
+        with open(ring_src, "r+") as file:
             if post_url in file.read():
                 pass
             else:
                 file.write(post_url + "\n")
 
 
-# Read master_list and check if link is valid
+# Read ring_src and check if link is valid
 # if valid, continue with data mine
-# if invalid, remove from master_list
+# if invalid, remove from ring_src
 
-with open(master_list) as f:
-    master_list_urls = [line.rstrip() for line in f]
-    # print(master_list_urls)
+with open(ring_src) as f:
+    ring_src_lines = [line.rstrip() for line in f]
+    # print(ring_src_lines)
 
-with open(data_list) as g:
-    data_list_urls = [line.rstrip() for line in g]
-    # print(data_list_urls)
+with open(ring_data) as g:
+    ring_data_lines = [line.rstrip() for line in g]
+    # print(ring_data_lines)
 
-for url in master_list_urls:
+for url in ring_src_lines:
     target_url = "https://www.idonowidont.com" + url
-    print(target_url)
+    # print(target_url)
 
-    with urlopen(target_url) as client:
-        if client.status != 200 and target_url not in data_list_urls:
+    with open(ring_data) as data:
+        if target_url in data.read():
             pass
         else:
-            page_html = client.read()
+            try:
+                page_html = client.read()
+            except:
+                pass
 
     soup_html = bs(page_html, "html.parser")
 
@@ -120,7 +123,7 @@ for url in master_list_urls:
     # values = [target_url, price, carat, clarity, shape, color]
     values = target_url + "|" + price + "|" + carat + "|" + clarity + "|" + shape + "|" + color
 
-    textfile = open(data_list, "a")
+    textfile = open(ring_data, "a")
     textfile.write(values + "\n")
     textfile.close()
 
