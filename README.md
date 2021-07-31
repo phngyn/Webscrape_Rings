@@ -26,5 +26,9 @@ The current python script:
     1. Color
 
 ## Future plans
-The script will pull listings from all categories and all attributes.
-  
+- The script will pull listings from all categories and all attributes.
+- The script needs to detect when a post is removed from the website and remove it from the list
+- Detect duplicate entries or update existing entries
+- Break up script up into parts instead one run 
+- Add error handling for:
+    - Invalid links

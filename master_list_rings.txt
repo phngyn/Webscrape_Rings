@@ -31,7 +31,6 @@
 /diamonds/gia-certified-271-ctw-3-stone-old-european-cut-ring-730193
 /diamonds/cushion-cut-engagement-ring-730825
 /diamonds/exquisite-diamond-edwardian-vintage-ring-size-525-730824
-/diamonds/ladies-diamond-engagement-ring-730822
 /diamonds/forevermark-5-diamond-halo-18k-white-gold-ring-730820
 /diamonds/beautiful-46-carat-brilliant-round-cut-solitaire-diamond-ring-14k-gold-size-575-730818
 /diamonds/jared-new-gorgeous-engagement-ring-730813
@@ -959,3 +958,17 @@
 /diamonds/stylish-bezel-set-center-diamond-set-platinum-band-artisticaly-carved-design-both-sides-080
 /diamonds/halo-ring-features-exclusive-three-stone-design-round-cut-diamonds-platinum-setting100-ct
 /diamonds/steal-artisan-made-heirloom-6-ct-engagement-ring-306956
+/diamonds/kirk-kara-18k-white-gold-engagement-ring-and-band-set-730867
+/diamonds/oval-diamond-bridal-set-730869
+/diamonds/lab-grown-emerald-gold-ring-730866
+/diamonds/1-carat-fancy-canary-diamond-engagement-ring-730863
+/diamonds/zales-1-carat-white-gold-solitaire-diamond-engagement-ring-730862
+/diamonds/solitaire-diamond-ring-and-diamond-wedding-band-730860
+/diamonds/brilliant-blue-sapphire-engagement-ring-730859
+/diamonds/jared-engagement-ring-and-wedding-band-730836
+/diamonds/brand-new-105-ct-solitaire-730841
+/diamonds/official-lauren-b-moissanite-pear-pave-ring-2-carat-equivalent-723366
+/diamonds/152ct-engagement-ring-620196
+/diamonds/stunning-custom-251-tcw-gia-radiant-engagement-ring-wedding-band-630266
+/diamonds/stunning-14k-yellow-gold-engagement-diamond-ring-beautiful-gia-certified-051ct-centre
+/diamonds/069-carat-round-diamond-solitaire-engagement-ring-610826

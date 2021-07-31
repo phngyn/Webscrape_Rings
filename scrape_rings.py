@@ -63,11 +63,11 @@ for i in range(0, last_page + 1):
 
 with open(master_list) as f:
     master_list_urls = [line.rstrip() for line in f]
-    print(master_list_urls)
+    # print(master_list_urls)
 
 with open(data_list) as g:
     data_list_urls = [line.rstrip() for line in g]
-    print(data_list_urls)
+    # print(data_list_urls)
 
 for url in master_list_urls:
     target_url = "https://www.idonowidont.com" + url
