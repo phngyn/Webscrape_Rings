@@ -16,14 +16,14 @@ The marketplace has the below categories:
 
 
 The current python script:
-  1. Loops through the engagement ring pages
-  1. Records each post url into a data list file
-  1. Loops through the urls to collect data on the rings:
-    - Price
-    - Carat
-    - Clarity
-    - Shape
-    - Color
+1. Loops through the engagement ring pages
+1. Records each post url into a data list file
+1. Loops through the urls to collect data on the rings:
+  - Price
+  - Carat
+  - Clarity
+  - Shape
+  - Color
 
 
 Future plans
