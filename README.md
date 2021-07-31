@@ -18,11 +18,11 @@ The current python script:
 1. Loops through the engagement ring pages
 1. Records each post url into a data list file
 1. Loops through the urls to collect data on the rings:
-  1. Price
-  1. Carat
-  1. Clarity
-  1. Shape
-  1. Color
+    1. Price
+    1. Carat
+    1. Clarity
+    1. Shape
+    1. Color
 
 Future plans
 The script will pull listings from all categories and all attributes.
