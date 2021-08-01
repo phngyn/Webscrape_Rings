@@ -31,7 +31,7 @@ for i in range(0, last_page + 1):
     with urlopen(MY_URL) as client:
         page_html = client.read()
         soup_html = bs(page_html, "html.parser")
-        container_posting = soup_html.findAll("div", {"class":"ds-1col"})
+        container_posting = soup_html.find_all("div", {"class":"ds-1col"})
 
     for posts in container_posting:
         post_url = posts.div.a["href"]
@@ -90,7 +90,13 @@ for url in ring_src_lines:
                     except:
                         color = "null"
 
-                    values = target_url + "|" + price + "|" + carat + "|" + clarity + "|" + shape + "|" + color
+                    try:
+                        container_cut = soup_html.find("li", {"class":"field_cut"})
+                        cut = container_cut.div.div.get_text()
+                    except:
+                        cut = "null"
+
+                    values = target_url + "|" + price + "|" + carat + "|" + clarity + "|" + shape + "|" + color + "|" + cut 
 
                     with open(ring_data, "a") as data:
                         data.write(values + "\n")
