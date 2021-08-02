@@ -9,7 +9,6 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 ring_src = dir_path + "\\ring_src.txt"
 
 #Find the last page on the website to know our loop range
-
 with urlopen(BASE_URL) as client:
     page_html = client.read()
     soup_html = bs(page_html, "html.parser")
@@ -30,7 +29,7 @@ for i in range(0, last_page + 1):
         page_html = client.read()
         soup_html = bs(page_html, "html.parser")
         container_posting = soup_html.find_all("div", {"class":"ds-1col"})
-
+        
     for posts in container_posting:
         post_url = posts.div.a["href"]
         with open(ring_src, "r+") as file:
