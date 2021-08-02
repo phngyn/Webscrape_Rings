@@ -2,6 +2,7 @@ import os
 import json
 import re
 import pprint
+from typing import Text
 
 from urllib.request import urlopen
 from bs4 import BeautifulSoup as bs
@@ -24,12 +25,17 @@ with urlopen(MY_URL) as client:
     for fields in cols:
         # print(i)
         for element in fields.find_all("li",class_=True):
-            try:
-                key = element['class'][0] 
-                value = element.a.get_text()
-                ring_fields[key] = value
-            except:
-                pass
+            # print(element['class'][0])
+            key = element['class'][0] 
+            value = element.get_text(strip=True)
+            ring_fields[key] = value
+            print(value)
+#             try:
+#                 key = element['class'][0] 
+#                 value = element.a.get_text()
+#                 ring_fields[key] = value
+#             except:
+#                 pass
     with open(tar_file, "a") as data:
         data.write(json.dumps(ring_fields) + "\n")
         print("Added:", ring_fields)
