@@ -13,10 +13,13 @@ tar_file = dir_path + "\\wip\\tester.txt"
 
 ring_fields = {}
 ring_fields["link"] = MY_URL
+ring_fields["price"] = MY_URL
+
 
 with urlopen(MY_URL) as client: 
     page_html = client.read()
     soup_html = bs(page_html, "html.parser")
+    ring_fields["price"] = soup_html.find("span", {"class":"product-price"}).get_text()
     cols = soup_html.find_all("div", {"class":"attributes col-md-4"})
     for fields in cols:
         # print(i)

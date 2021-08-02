@@ -10,7 +10,18 @@ with open(ring_data) as rdata:
     for line in rdata:
         data.append(json.loads(line))
 
+ring_round= []
 # Gets the value
 for entry in data:
-   for j in entry:
-    pprint.pprint(entry)
+    # for j in entry:
+    try:
+        if (
+            entry["field_shape"] == "Round" and
+            entry["field_shape"] == "Round"
+           ):
+            ring_round.append(entry)
+            # print(entry["field_shape"])
+    except:
+        pass
+
+pprint.pprint(ring_round)

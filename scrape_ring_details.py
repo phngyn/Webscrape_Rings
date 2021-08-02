@@ -28,6 +28,7 @@ for url in ring_src_lines:
                 with urlopen(target_url) as client:
                     page_html = client.read()
                     soup_html = bs(page_html, "html.parser")
+                    ring_fields["price"] = soup_html.find("span", {"class":"product-price"}).get_text()
                     cols = soup_html.find_all("div", {"class":"attributes col-md-4"})
                     for fields in cols:
                         for element in fields.find_all("li",class_=True):
