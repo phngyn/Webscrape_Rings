@@ -14,5 +14,3 @@ with open(ring_data) as rdata:
         data.append(json.loads(line))
 
 df = pd.DataFrame(data).to_clipboard()
-
-# print(df)
