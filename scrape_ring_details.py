@@ -32,8 +32,9 @@ for url in ring_src_lines:
                     cols = soup_html.find_all("div", {"class":"attributes col-md-4"})
                     for fields in cols:
                         for element in fields.find_all("li",class_=True):
+                            # print(element['class'][0])
                             key = element['class'][0] 
-                            value = element.get_text(stripe=True)
+                            value = element.get_text(strip=True)
                             ring_fields[key] = value
                     with open(ring_data, "a") as data:
                         data.write(json.dumps(ring_fields) + "\n")

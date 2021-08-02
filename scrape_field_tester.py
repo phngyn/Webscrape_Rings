@@ -29,7 +29,7 @@ with urlopen(MY_URL) as client:
             key = element['class'][0] 
             value = element.get_text(strip=True)
             ring_fields[key] = value
-            print(value)
+            # print(value)
 #             try:
 #                 key = element['class'][0] 
 #                 value = element.a.get_text()
@@ -40,4 +40,4 @@ with urlopen(MY_URL) as client:
         data.write(json.dumps(ring_fields) + "\n")
         print("Added:", ring_fields)
 
-pprint.pprint(ring_fields)
+# pprint.pprint(ring_fields)
