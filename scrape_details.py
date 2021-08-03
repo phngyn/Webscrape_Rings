@@ -1,5 +1,7 @@
 import os
 import json
+import re
+
 from urllib.request import urlopen
 from bs4 import BeautifulSoup as bs
 
@@ -24,7 +26,7 @@ for url in ring_src_lines:
                     page_html = client.read()
                     soup_html = bs(page_html, "html.parser")
                     ring_fields["price"] = soup_html.find("span", {"class":"product-price"}).get_text()
-                    cols = soup_html.find_all("div", {"class":"attributes col-md-4"})
+                    cols = soup_html.find_all("div", {"class" : re.compile("attributes*")})
                     for fields in cols:
                         for element in fields.find_all("li",class_=True):
                             key = element['class'][0] 
