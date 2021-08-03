@@ -3,8 +3,6 @@ import json
 from urllib.request import urlopen
 from bs4 import BeautifulSoup as bs
 
-BASE_URL = "https://www.idonowidont.com/marketplace/engagement-rings"
-
 dir_path = os.path.dirname(os.path.realpath(__file__))
 ring_src = dir_path + "\\ring_src.txt"
 ring_data = dir_path + "\\ring_data.txt"
