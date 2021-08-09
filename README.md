@@ -6,12 +6,12 @@ To better find rings or jewelry matching our buy criteria, we use `BeautifulSoup
 To start, make sure the program dependencies (`BeautifulSoup4` and `pandas`) are installed:
     ```pip install -r requirements.txt```
 
-Next run main.py. The program does the following:
+Next run `main.py`, the program does the following:
   - Find all marketplaces in https://www.idonowidont.com/
   - For each marketplace, find all posts
   - For each post, check if the link exists in our data file
-  - If the post doesn't exist, record the url, price, and all attributes into data_output.json
-  - Use pandas to convert the data into a dataframe
+  - If the post doesn't exist, record the url, price, and all attributes into `data_output.json`
+  - Use `pandas` to convert the data into a dataframe
   - Copy the dataframe into clipboard
 
-From here there, you can paste the data into Excel and filter for the desired fields.
+From here there, you can paste the data into `Excel` and filter for the desired fields.
