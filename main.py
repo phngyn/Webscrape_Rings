@@ -77,14 +77,15 @@ def write_to_file(input, file):
         file.write(json.dumps(input) + "\n")
         print( "Added:", input)
 
-# def is_in_json(input, file):
-#     data = []
-#     with open(file) as file:
-#         for line in file:
-#             data.append(json.loads(line))
-#         data = json.load(file)
-#     return input in data
-#     return any(data["link"] == input for data in data["link"])
+def return_json_values(json_file):
+    post_detail = []
+    data_values = []
+    with open(json_file) as file:
+        for line in file:
+            data_dict = json.loads(line)
+            post_detail.append(data_dict)
+        data_values = [value for element in post_detail for value in element.values()]
+    return data_values
 
 def main():
     BASE_URL = "https://www.idonowidont.com"
@@ -101,22 +102,23 @@ def main():
 
     for post in all_posts:
         my_url = BASE_URL + post
-        # print(is_in_json(my_url, data_ouput))
-        with open(data_ouput, "a+") as data:
-            if post in data.read():
-                # TODO: fix bug for detecting if url exists in our data file
-                print( "Exists:", post)
-            else:
-                post_details = get_post_details(my_url)
-                write_to_file(post_details, data_ouput)
+        if my_url in return_json_values(data_ouput):
+            all_posts.remove(post)
+            print(f"{post} removed.")
+        else:
+            post_details = get_post_details(my_url)
+            write_to_file(post_details, data_ouput)
     
-    data = []
-    with open(data_ouput) as rdata:
-        for line in rdata:
-            data.append(json.loads(line))
-    df = DataFrame(data).to_clipboard()
+    data_set = []
+    with open(data_ouput) as file:
+        for line in file:
+            data_set.append(json.loads(line))
+    df = DataFrame(data_set).to_clipboard()
 
 if __name__ == "__main__":
     start_time = time.time()
     main()
+    # test_file = "C:\\dev\\Projects\\webscrape_idnid\\data_output.json"
+    # test_str = "https://www.idonowidont.com/jewelry/ted-muehling-hand-cut-indian-moonstone-earrings-649556"
+    # print(is_in_json(test_str, test_file))
     print("--- %s seconds ---" % (time.time() - start_time))
