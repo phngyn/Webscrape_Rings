@@ -8,17 +8,17 @@ from pandas import DataFrame
 from urllib3 import response, PoolManager
 from bs4 import BeautifulSoup as bs
 
-def get_market_posts(url, market, last_page):
+def get_market_posts(market_url, last_page):
     url_list = []
     http = PoolManager()
 
-    for i in range(0, last_page + 1):
+    for i in range(0, last_page):
         if i == 0:
-            MY_URL = url + market
+            MY_URL = market_url
         else:
-            MY_URL = url + market + "?page=" + str(i)
+            MY_URL = market_url + "?page=" + str(i)
 
-        response = http.request("GET", url + market)
+        response = http.request("GET", MY_URL)
         soup_html = bs(response.data, "html.parser")
         posts = soup_html.find_all("div", {"class":"ds-1col"})
             
@@ -28,10 +28,10 @@ def get_market_posts(url, market, last_page):
             
     return url_list
 
-def get_markets(url):
+def get_markets(base_url):
     markets = []
     http = PoolManager()
-    response = http.request("GET", url)
+    response = http.request("GET", base_url)
     soup_html = bs(response.data, "html.parser")
     marketplace = soup_html.find_all("div", {"class":"button-cell"})
     
@@ -40,25 +40,25 @@ def get_markets(url):
     
     return markets
 
-def get_last_page(url, market):
+def get_last_page(market_url):
     http = PoolManager()
-    response = http.request("GET", url + market)
+    response = http.request("GET", market_url)
     soup_html = bs(response.data, "html.parser")
 
     try:
         last_page_url = soup_html.find("li", {"class":"pager__item pager__item--last"}).a["href"]
         # not sure why last page is off by -1, so we add 1
-        return int(last_page_url[-2:]) + 1
+        return int(last_page_url.rsplit("page=", 1)[1])
     except:
         return 0
 
-def get_post_details(url):
+def get_post_details(post_url):
     post_details = {}
-    post_details["link"] = url
+    post_details["link"] = post_url
     http = PoolManager()
 
     try:    
-        response = http.request("GET", url)
+        response = http.request("GET", post_url)
         soup_html = bs(response.data, "html.parser")
         post_details["price"] = soup_html.find("span", {"class":"product-price"}).get_text()
         cols = soup_html.find_all("div", {"class" : re.compile("attributes*")})
@@ -77,6 +77,15 @@ def write_to_file(input, file):
         file.write(json.dumps(input) + "\n")
         print( "Added:", input)
 
+# def is_in_json(input, file):
+#     data = []
+#     with open(file) as file:
+#         for line in file:
+#             data.append(json.loads(line))
+#         data = json.load(file)
+#     return input in data
+#     return any(data["link"] == input for data in data["link"])
+
 def main():
     BASE_URL = "https://www.idonowidont.com"
     markets = get_markets(BASE_URL + "/marketplace/")
@@ -85,14 +94,17 @@ def main():
     all_posts = []
 
     for market in markets:
-        last_page = get_last_page(BASE_URL, market)
-        all_posts.extend(get_market_posts(BASE_URL, market, last_page))
+        my_url = BASE_URL + market
+        last_page = get_last_page(my_url)
+        post_url = get_market_posts(my_url, last_page)
+        all_posts.extend(post_url)
 
     for post in all_posts:
         my_url = BASE_URL + post
+        # print(is_in_json(my_url, data_ouput))
         with open(data_ouput, "a+") as data:
             if post in data.read():
-                # pass
+                # TODO: fix bug for detecting if url exists in our data file
                 print( "Exists:", post)
             else:
                 post_details = get_post_details(my_url)
@@ -106,8 +118,5 @@ def main():
 
 if __name__ == "__main__":
     start_time = time.time()
-    # try:
     main()
-    # except:
-    #     pass
     print("--- %s seconds ---" % (time.time() - start_time))
