@@ -109,7 +109,8 @@ def main():
     base_url = "https://www.idonowidont.com"
     markets = get_markets(base_url + "/marketplace/")
     dir_path = os.path.dirname(os.path.realpath(__file__))
-    data_ouput = dir_path + "\\data_output.json"
+    data_ouput = dir_path + "/data_output.json"
+    
     all_posts = []
 
     for market in markets:
