@@ -109,7 +109,7 @@ def main():
     base_url = "https://www.idonowidont.com"
     markets = get_markets(base_url + "/marketplace/")
     dir_path = os.path.dirname(os.path.realpath(__file__))
-    data_ouput = dir_path + "/data_output.json"
+    data_ouput = os.path.join(dir_path, "data_output.json")
     
     all_posts = []
 
@@ -133,7 +133,7 @@ def main():
     with open(data_ouput) as file:
         for line in file:
             data_set.append(json.loads(line))
-    DataFrame(data_set).to_clipboard()
+    # DataFrame(data_set).to_clipboard()
 
 if __name__ == "__main__":
     start_time = time.time()
