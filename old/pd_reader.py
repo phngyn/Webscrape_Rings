@@ -1,7 +1,5 @@
-from datetime import date
 import os
 import json
-import pprint
 import pandas as pd
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
