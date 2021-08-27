@@ -6,16 +6,17 @@ import os
 import json
 import re
 import time
+import requests
 
 from pandas import DataFrame
 
-from urllib3 import PoolManager
+# from urllib3 import PoolManager
 from bs4 import BeautifulSoup as bs
 
 def get_market_posts(market_url, last_page):
     """Returns the list of all post urls from a market."""
     url_list = []
-    http = PoolManager()
+    # http = PoolManager()
 
     for i in range(0, last_page):
         if i == 0:
@@ -23,8 +24,8 @@ def get_market_posts(market_url, last_page):
         else:
             my_url = market_url + "?page=" + str(i)
 
-        http_response = http.request("GET", my_url)
-        soup_html = bs(http_response.data, "html.parser")
+        http_response = requests.get(my_url)
+        soup_html = bs(http_response.text, "html.parser")
         posts = soup_html.find_all("div", {"class":"ds-1col"})
 
         for post in posts:
@@ -36,9 +37,9 @@ def get_market_posts(market_url, last_page):
 def get_markets(base_url):
     """Returns a list of markets found in the website."""
     markets = []
-    http = PoolManager()
-    http_response = http.request("GET", base_url)
-    soup_html = bs(http_response.data, "html.parser")
+    # http = PoolManager()
+    http_response = requests.get(base_url)
+    soup_html = bs(http_response.text, "html.parser")
     marketplace = soup_html.find_all("div", {"class":"button-cell"})
     for market in marketplace:
         markets.append(market.a["href"])
@@ -48,9 +49,9 @@ def get_markets(base_url):
 def get_last_page(market_url):
     """Tries to find the last page in the marketplace.
     Used for looping through the range of market pages."""
-    http = PoolManager()
-    http_response = http.request("GET", market_url)
-    soup_html = bs(http_response.data, "html.parser")
+    # http = PoolManager()
+    http_response = requests.get(market_url)
+    soup_html = bs(http_response.text, "html.parser")
 
     try:
         last_page_url = soup_html.find("li", {"class":"pager__item pager__item--last"}).a["href"]
@@ -63,11 +64,11 @@ def get_post_details(post_url):
     """Retrieves all post attributes from the the target url."""
     post_details = {}
     post_details["link"] = post_url
-    http = PoolManager()
+    # http = PoolManager()
 
     try:
-        http_response = http.request("GET", post_url)
-        soup_html = bs(http_response.data, "html.parser")
+        http_response = requests.get(post_url)
+        soup_html = bs(http_response.text, "html.parser")
         post_details["price"] = soup_html.find("span", {"class":"product-price"}).get_text()
         cols = soup_html.find_all("div", {"class" : re.compile("attributes*")})
         for fields in cols:
