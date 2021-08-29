@@ -35,3 +35,5 @@ python main.py
   - If the listing doesn't exist in our data file, record the url, price, and all attributes into `output.json`
 
 From here, you can use `pd_reader.py` to create a user-friendly spreadsheet and filter for your desired jewelry traits.
+
+[](images/filtered_data.png)
