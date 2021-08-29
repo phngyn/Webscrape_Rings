@@ -1,6 +1,9 @@
 # Webscrape IDoNowIDont
 Idinid is a 2nd hand marketpalce for rings, watches, and jewlery. It's like Craigslist or Facebook Marketplace for used jewlery, but the filtering UI is limited.
-To get around the clunky design, we use `requests` and `BeautifulSoup4` to parse the marketplace for all listing attributes. Each listing has a varied number of attributes (e.g. some rings have side stones and have fields for the side stones), so we save the data in dictionary format and export to `json` format.
+To get around the clunky design, we use `requests` and `BeautifulSoup4` to parse the marketplace for all listing attributes. 
+
+Each listing has a varied number of attributes (e.g. some rings have side stones and have fields for the side stones), so we save the data in dictionary format and export to `json` format.
+
 We can then use `pandas` to output a user-friendly spreadspeed and filter for our desired traits.
 
 ## How to use
