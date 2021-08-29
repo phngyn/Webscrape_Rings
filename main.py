@@ -8,9 +8,7 @@ import re
 import time
 import requests
 
-from pandas import DataFrame
-
-# from urllib3 import PoolManager
+# from pandas import DataFrame
 from bs4 import BeautifulSoup as bs
 
 def get_market_posts(market_url, last_page):
@@ -103,14 +101,12 @@ def main():
     Find all marketplaces in https://www.idonowidont.com/
     For each marketplace, find all posts
     For each post, check if the link exists in our data file
-    If the post doesn't exist, record the url, price, and all attributes into data_output.json
-    Use pandas to convert the data into a dataframe
-    Copy the dataframe into clipboard
+    If the post doesn't exist, record the url, price, and all attributes into output.json
     """
     base_url = "https://www.idonowidont.com"
     markets = get_markets(base_url + "/marketplace/")
     dir_path = os.path.dirname(os.path.realpath(__file__))
-    data_ouput = os.path.join(dir_path, "data_output.json")
+    data_ouput = os.path.join(dir_path, "output.json")
     
     all_posts = []
 
