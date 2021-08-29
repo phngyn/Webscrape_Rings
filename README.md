@@ -31,4 +31,4 @@ python main.py
   - For each post, check if the link exists in our data file
   - If the post doesn't exist, record the url, price, and all attributes into `output.json`
 
-From here, use `pd_reader.py` to export a user-friendly spreadsheet and filter for the desired jewlery traits.
+From here, use `pd_reader.py` to export a user-friendly spreadsheet and filter for the desired jewelry traits.
