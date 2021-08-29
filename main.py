@@ -126,10 +126,10 @@ def main():
             post_details = get_post_details(my_url)
             write_to_file(post_details, data_ouput)
 
-    data_set = []
-    with open(data_ouput) as file:
-        for line in file:
-            data_set.append(json.loads(line))
+    # data_set = []
+    # with open(data_ouput) as file:
+    #     for line in file:
+    #         data_set.append(json.loads(line))
     # DataFrame(data_set).to_clipboard()
 
 if __name__ == "__main__":
