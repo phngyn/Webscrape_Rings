@@ -3,7 +3,7 @@ import json
 import pandas as pd
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
-ring_data = os.path.join(dir_path, "output.json")
+ring_data = os.path.join(dir_path, "output2.json")
 
 data = []
 
