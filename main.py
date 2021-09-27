@@ -116,6 +116,9 @@ def main():
         post_url = get_market_posts(my_url, last_page)
         all_posts.extend(post_url)
 
+    # remove enries from output.json if they're not in all_posts
+    # these are posts that are no longer available;
+
     for post in all_posts:
         my_url = base_url + post
         data_check = get_links_in(data_ouput)
