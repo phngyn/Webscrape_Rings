@@ -1,3 +1,4 @@
+import pdb
 import os
 import json
 import pandas as pd
@@ -14,3 +15,4 @@ with open(ring_data) as rdata:
 df = pd.DataFrame(data).to_json("idnid.json")
 df = pd.DataFrame(data).to_excel("idnid.xlsx")
 # df = pd.DataFrame(data).to_sql("idnid")
+# pdb.set_trace()
